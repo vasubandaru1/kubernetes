@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample03
+spec:
+    containers:
+      - name: nginx
+        image: nginx
+        env:
+          - name: URL
+            value: google.com
+
+---
+apiVersiom: v1
+kind: ConfigMap
+metadata:
+    name: config1
+data:
+   URL: sample.com
+   URL1: rrr.com
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample04
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      envFrom:
+        - ConfigMapRef:
+            name: config1
