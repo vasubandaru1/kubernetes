@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: sample5
+spec:
+    containers:
+         - name: health
+           image: vasubandaru/health-demo:latest
+           imagePullPolicy: Always
