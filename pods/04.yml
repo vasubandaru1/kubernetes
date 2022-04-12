@@ -8,12 +8,12 @@ spec:
            image: vasubandaru/health-demo:latest
            imagePullPolicy: Always
            readinessProbe:
-              tcpSocket:
-                  port: 80
+              httpGet:
+                 path: /
               initialDelaySeconds: 5
               periodSeconds: 10
            livenessProbe:
-              tcpSocket:
-                  port: 80
+              httpGet:
+                  path: /
               initialDelaySeconds: 5
               periodSeconds: 10
