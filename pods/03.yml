@@ -18,12 +18,11 @@ metadata:
 data:
    URL: sample.com
    URL1: rrr.com
-
 ---
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sample04
+  name: sample4
 spec:
   containers:
     - name: nginx
