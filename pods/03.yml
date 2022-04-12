@@ -17,7 +17,7 @@ metadata:
     name: config1
 data:
    URL: sample.com
-   URL1: rrr.com
+   URL1: yahoo.com
 ---
 apiVersion: v1
 kind: Pod
